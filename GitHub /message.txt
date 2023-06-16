@@ -1,9 +1,5 @@
 This is some random text.
 text from initial commit message.
 
-<<<<<<< HEAD
 text form github branch
-=======
 text from branch 2
-
->>>>>>> github-task-branch2
