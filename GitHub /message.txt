@@ -1,5 +1,0 @@
-This is some random text.
-text from initial commit message.
-
-text form github branch
-text from branch 2

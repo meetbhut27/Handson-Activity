@@ -1,0 +1,28 @@
+{
+  "recipe": [
+    {
+      "id": 1687349871473,
+      "name": "Kadai paneer",
+      "type": "Indian",
+      "description": "Paneer and green peppers in tomato gravy"
+    },
+    {
+      "id": 1687350062770,
+      "name": "Bhatura",
+      "type": "Indian",
+      "description": "a fluffy deep-fried leavened bread originating from the Indian subcontinent."
+    },
+    {
+      "id": 1687350232001,
+      "name": "Fudge",
+      "type": "American",
+      "description": "Fudge is a type of confection that is made by mixing sugar, butter and milk. "
+    },
+    {
+      "id": 1687350308178,
+      "name": "Maccu",
+      "type": "Italian",
+      "description": "Maccu is a Sicilian soup."
+    }
+  ]
+}

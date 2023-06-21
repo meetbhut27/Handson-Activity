@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Recipe App</title>
+</head>
+
+<body>
+    <div class="h3 text-center my-5">Recipe List</div>
+    <ul class="d-flex flex-column align-items-center" on>
+    </ul>
+    <div class="text-center">
+        <Button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#addRecipeModal">Add New
+            Recipe</Button>
+    </div>
+    <script src="Recipe.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+<!--Add Recipe Modal -->
+<div class="modal fade" id="addRecipeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Recipe</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addFrom">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="type" class="form-label">Type</label>
+                        <select class="form-select" id="type" name="type">
+                            <option value="Indian">Indian</option>
+                            <option value="Italian">Italian</option>
+                            <option value="American">American</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea type="text" class="form-control" id="description" name="description"
+                            placeholder="Description"></textarea>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addRecipe()">Add Recipe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Update Recipe Modal -->
+<div class="modal fade" id="editRecipeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Recipe</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editFrom">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="editName" name="name" placeholder="Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="type" class="form-label">Type</label>
+                        <select class="form-select" id="editType" name="type">
+                            <option value="Indian">Indian</option>
+                            <option value="Italian">Italian</option>
+                            <option value="American">American</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea type="text" class="form-control" id="editDescription" name="description"
+                            placeholder="Description"></textarea>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="updateRecipe()">Update Recipe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--View Recipe Modal -->
+<div class="modal fade" id="viewRecipeModel" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Recipe Details</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="recipeData">
+                    <div>
+                        <span class="h6">Id:</span>
+                        <span class="viewId"></span>
+                    </div>
+                    <div>
+                        <span class="h6">Name:</span>
+                        <span class="viewName"></span>
+                    </div>
+                    <div>
+                        <span class="h6">Type:</span>
+                        <span class="viewType"></span>
+                    </div>
+                    <div>
+                        <span class="h6">Description:</span>
+                        <span class="viewDesc"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
